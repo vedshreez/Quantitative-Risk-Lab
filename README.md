@@ -1,4 +1,4 @@
-# Quantitative Risk Lab 📉
+# Quantitative Risk Lab 
 **Current Status:** Active Sprint (Jan 2026)
 
 ## Objective
