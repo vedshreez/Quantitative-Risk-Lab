@@ -1,4 +1,4 @@
-# Quantitative Risk Lab 
+# Quantitative Risk Lab
 **Current Status:** Active Sprint (Jan 2026)
 
 ## Objective
@@ -11,16 +11,22 @@ To build a production-grade Risk Management engine in Python that bridges the ga
 4. **Stress Testing:** Scenario Analysis for Macro-Economic Shocks. (Upcoming)
 
 ## Tech Stack
-* **Language:** Python
+* **Language:** Python 3.10+
 * **Libraries:** Pandas, NumPy, Scikit-Learn, SciPy
 * **Data Source:** Yahoo Finance (yfinance), FRED (Federal Reserve)
 
+---
+
 ## Day 3: Monte Carlo Simulation 🎲
-**Goal:** Predict future portfolio performance using stochastic simulations.
+**Goal:** Implement a stochastic model to predict future portfolio performance under non-normal market conditions.
 
-**What I built:**
-- Implemented **Monte Carlo VaR** (Value at Risk) using 10,000 simulations.
-- Used **Cholesky Decomposition** to apply accurate correlation between assets (e.g., ensuring AAPL and MSFT move together).
-- **Result:** The model predicts a maximum loss of $X (replace with your number) at 95% confidence.
+**Key Features Implemented:**
+- **Monte Carlo Engine:** Generated 10,000 random market scenarios to model tail risk.
+- **Cholesky Decomposition:** Applied Linear Algebra to preserve the correlation structure between assets (e.g., maintaining the positive correlation between SPY and AAPL during crash simulations).
+- **Visualization:** Plotted the distribution of potential future returns to identify tail events.
 
-**Tech Stack:** Python, NumPy, Linear Algebra.
+**Results:**
+- **Monte Carlo VaR (95% Confidence):** $[$180.32] 
+
+
+![Monte Carlo Distribution](day3_monte_carlo.png)
