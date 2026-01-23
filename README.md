@@ -30,3 +30,19 @@ To build a production-grade Risk Management engine in Python that bridges the ga
 
 
 ![Monte Carlo Distribution](day3_monte_carlo.png)
+
+## Day 4: Model Validation Dashboard 📊
+**Goal:** Compare and validate different risk models to ensure robustness.
+
+**What I built:**
+- Integrated all three engines (Historical, Parametric, Monte Carlo) into a single dashboard.
+- Created a visualization to compare the 95% VaR estimates side-by-side.
+- **Analysis:**
+The Monte Carlo simulation produced the highest VaR estimate ($[$179.62]). This indicates that the stochastic model successfully captured "tail risk" and potential correlation breakdowns that the Parametric (Normal Distribution) and Historical models might have smoothed out. As a result, the Monte Carlo metric serves as our conservative baseline for capital allocation.
+
+**Outcome:**
+- Historical VaR: $[$169.77]
+- Parametric VaR: $[$175.95]
+- Monte Carlo VaR: $[$179.62]
+
+![VaR Comparison](day4_comparison.png)
