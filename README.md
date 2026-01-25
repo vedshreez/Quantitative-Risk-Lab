@@ -46,3 +46,22 @@ The Monte Carlo simulation produced the highest VaR estimate ($[$179.62]). This 
 - Monte Carlo VaR: $[$179.62]
 
 ![VaR Comparison](day4_comparison.png)
+
+## Day 5: Backtesting (The Reality Check) 📉
+**Goal:** Validate the accuracy of the VaR model using a Rolling Window approach.
+
+**Methodology:**
+- **Technique:** Rolling Window Backtest (Window = 252 Days).
+- **Metric:** Comparing Ex-Ante VaR predictions vs. Ex-Post Actual Returns.
+- **Validation:** Kupiec Test (Target failure rate = 5% for 95% Confidence).
+
+**Results:**
+- **Total Days Tested:** 753
+- **Exceptions (Breaches):** 39
+- **Failure Rate:** 5.18% (Target: 5.00%)
+- **Status:** ✅ GREEN (Model is statistically valid).
+
+**Conclusion:**
+The model demonstrated high accuracy, deviating only 0.18% from the theoretical expectation. This confirms that the parametric assumption holds relatively well for this specific portfolio mix (Tech + Bonds + Gold) over the testing period.
+
+![Backtest Chart](day5_backtest.png)
