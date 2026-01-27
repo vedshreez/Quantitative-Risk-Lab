@@ -79,3 +79,15 @@ The model demonstrated high accuracy, deviating only 0.18% from the theoretical 
 EWMA assigns higher weight to recent returns, making it superior for VaR models during periods of high market stress (e.g., COVID-19 crash).
 
 ![EWMA Chart](day6_ewma.png)
+
+### Day 7: GARCH(1,1) Volatility Modeling 🧠
+**Goal:** Implement the Nobel-Prize-winning GARCH model to forecast volatility with Mean Reversion.
+
+**What I built:**
+- Used the `arch` Python library to fit a **GARCH(1,1)** model on SPY returns.
+- **Estimated Parameters:**
+    - $\alpha$ (Shock Sensitivity): 0.1627 (Markets are highly reactive to recent news).
+    - $\beta$ (Persistence): 0.8099 (Volatility is "sticky" and decays slowly).
+- **Key Insight:** The sum of $\alpha + \beta = 0.9726$. Since this is < 1, the model is **stable** but shows high persistence, meaning market stress lingers for a long time before returning to normal.
+
+![GARCH Model](day7_garch.png)
