@@ -64,4 +64,18 @@ The Monte Carlo simulation produced the highest VaR estimate ($[$179.62]). This 
 **Conclusion:**
 The model demonstrated high accuracy, deviating only 0.18% from the theoretical expectation. This confirms that the parametric assumption holds relatively well for this specific portfolio mix (Tech + Bonds + Gold) over the testing period.
 
-![Backtest Chart](day5_backtest.png)
+## Module 2: Volatility Forecasting 📉
+**Current Status:** Active (Jan 2026)
+
+### Day 6: EWMA Volatility Model
+**Goal:** Implement a dynamic volatility model that reacts to market shocks faster than a simple average.
+
+**What I built:**
+- Modeled volatility using **EWMA (Exponentially Weighted Moving Average)**.
+- Implemented the **RiskMetrics** standard decay factor ($\lambda = 0.94$).
+- **Comparison:** Visualized how EWMA captures volatility spikes instantly, whereas Simple Moving Average (SMA) lags behind.
+
+**Key Insight:**
+EWMA assigns higher weight to recent returns, making it superior for VaR models during periods of high market stress (e.g., COVID-19 crash).
+
+![EWMA Chart](day6_ewma.png)
