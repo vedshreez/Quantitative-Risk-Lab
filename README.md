@@ -91,3 +91,16 @@ EWMA assigns higher weight to recent returns, making it superior for VaR models 
 - **Key Insight:** The sum of $\alpha + \beta = 0.9726$. Since this is < 1, the model is **stable** but shows high persistence, meaning market stress lingers for a long time before returning to normal.
 
 ![GARCH Model](day7_garch.png)
+
+### Day 8: Predictive Volatility Forecasting 🔮
+**Goal:** Use the trained GARCH(1,1) model to predict market volatility for the next trading week.
+
+**What I built:**
+- Generated a **5-day volatility forecast** using the fitted model parameters.
+- **Method:** Utilized the GARCH recursive formula to project variance forward ($\sigma^2_{t+1}$).
+- **Visualization:** Plotted the "Term Structure of Volatility" to observe mean-reverting behavior.
+
+**Key Insight:**
+The forecast slope is **positive (upward)**, starting at ~0.72% and rising to ~0.81%. This indicates the market is currently in a **low-volatility regime** (below the long-run average), and the model expects risk to increase in the coming days as it mean-reverts.
+
+![Volatility Forecast](day8_forecast.png)
