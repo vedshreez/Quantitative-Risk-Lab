@@ -104,3 +104,19 @@ EWMA assigns higher weight to recent returns, making it superior for VaR models 
 The forecast slope is **positive (upward)**, starting at ~0.72% and rising to ~0.81%. This indicates the market is currently in a **low-volatility regime** (below the long-run average), and the model expects risk to increase in the coming days as it mean-reverts.
 
 ![Volatility Forecast](day8_forecast.png)
+
+## Module 3: Stress Testing & Scenario Analysis 🌪️
+**Current Status:** Started (Jan 2026)
+
+### Day 9: Historical Scenario Replay
+**Goal:** Assess portfolio resilience by simulating historical "Black Swan" events.
+
+**What I built:**
+- A **Stress Testing Engine** that replays market data from the **2008 Financial Crisis** and **2020 COVID-19 Crash**.
+- **Methodology:** Applied current portfolio weights to historical cumulative returns during crisis windows.
+- **Results:**
+    - **2008 Crisis Performance:** Portfolio outperformed the S&P 500 by holding its value significantly better (Max Drawdown ~27% vs Market ~50%).
+    - **Hedge Effectiveness:** Validated that TLT (Treasuries) and GLD (Gold) acted as negative-beta assets, rising while equities fell.
+- **Key Insight:** Diversification reduced the "Crash Risk" by nearly half compared to a pure equity portfolio.
+
+![Stress Test Chart](day9_stress_test.png)
