@@ -120,3 +120,19 @@ The forecast slope is **positive (upward)**, starting at ~0.72% and rising to ~0
 - **Key Insight:** Diversification reduced the "Crash Risk" by nearly half compared to a pure equity portfolio.
 
 ![Stress Test Chart](day9_stress_test.png)
+
+### Day 10: Expected Shortfall (ES) 📉
+**Goal:** Implement Basel III compliant risk metrics to measure the average loss in extreme tail events.
+
+**What I built:**
+- Calculated **Expected Shortfall (CVaR)** at 95% confidence using the Historical Method.
+- **Comparison:**
+    - **VaR (95%):** $167.00 (-1.67%) (The threshold).
+    - **ES (95%):** $248.00 (-2.48%) (The average loss beyond the threshold).
+- **Key Insight:** ES revealed that tail losses are **~48% worse** than the VaR limit implies, highlighting the danger of relying solely on VaR during "fat tail" events.
+
+![Expected Shortfall](day10_es.png)
+
+---
+## 🏁 Project Complete!
+**Summary:** Over 10 days, I engineered a full-stack Quantitative Risk Engine in Python, moving from basic data ingestion to advanced volatility modeling (GARCH) and regulatory-grade stress testing (ES).
